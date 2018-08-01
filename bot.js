@@ -1,5 +1,5 @@
 const { Client, RichEmbed } = require("discord.js");
-const client = new Client({ disableEveryone: true})
+const client = new Discord.Client();
 const ytdl = require("ytdl-core");
 const devs = ["402043862480322562" , "342690534000951306" , "443696811421466624" , "447804943454175232"]
 const request = require("request");
@@ -16,7 +16,6 @@ client.on('ready', () => console.log(`Launching...`))
 /////////////////////////////////////////////////////////////////////////////////
 const yt = require('ytdl-core');
 const snekfetch = require('snekfetch');
-const client = new Discord.Client();
 let dispatcher;
 
 
