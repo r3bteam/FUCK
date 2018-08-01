@@ -1,4 +1,4 @@
-const { Client, RichEmbed } = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
 const ytdl = require("ytdl-core");
 const devs = ["402043862480322562" , "342690534000951306" , "443696811421466624" , "447804943454175232"]
