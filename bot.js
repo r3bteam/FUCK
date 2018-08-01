@@ -16,7 +16,9 @@ client.on('ready', () => console.log(`Launching...`))
 /////////////////////////////////////////////////////////////////////////////////
 const yt = require('ytdl-core');
 const snekfetch = require('snekfetch');
+const client = new Discord.Client();
 let dispatcher;
+
 
 if (Number(process.version.slice(1).split(".")[0]) < 8) {
 	console.log("Node 8.0.0 or higher is required. Update Node on your system.");
@@ -45,14 +47,6 @@ client.on('ready', () => {
 client.on("message", async (message) => {
 	if (message.author.bot) return;
 	if (message.channel.type === 'dm') return;
-	if (!message.guild.member(client.user).hasPermission('SEND_MESSAGES')) return;
-	if (!message.guild.member(client.user).hasPermission('MANAGE_MESSAGES')) return;
-	if (!message.guild.member(client.user).hasPermission('EMBED_LINKS')) return;
-	if (!message.guild.member(client.user).hasPermission('VIEW_CHANNEL')) return;
-	if (!message.guild.member(client.user).hasPermission('READ_MESSAGE_HISTORY')) return;
-
-
-
 		const prefix = row.prefix
 		if (row.prefix === undefined) return prefix = "D"
 		if (message.content.indexOf(prefix) !== 0) return;
