@@ -46,19 +46,19 @@ client.on('ready', () => {
 client.on("message", async (message) => {
 	if (message.author.bot) return;
 	if (message.channel.type === 'dm') return;
-	if (!message.guild.member(client.user).hasPermission('0x00000800')) return;
-	if (!message.guild.member(client.user).hasPermission('0x00002000')) return;
-	if (!message.guild.member(client.user).hasPermission('0x00004000')) return;
-	if (!message.guild.member(client.user).hasPermission('0x00000400')) return;
-	if (!message.guild.member(client.user).hasPermission('0x00010000')) return;
+	if (!message.guild.member(client.user).hasPermission('2048')) return;
+	if (!message.guild.member(client.user).hasPermission('8192')) return;
+	if (!message.guild.member(client.user).hasPermission('16384')) return;
+	if (!message.guild.member(client.user).hasPermission('1024')) return;
+	if (!message.guild.member(client.user).hasPermission('65536')) return;
 		const prefix = row.prefix
 		if (row.prefix === undefined) return prefix = "D"
 		if (message.content.indexOf(prefix) !== 0) return;
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
 		if (command === "play") {
-			if (!message.guild.member(client.user).hasPermission('0x00100000')) return message.reply('Sorry, i dont have the perms to do this cmd i need CONNECT. :x:')
-			if (!message.guild.member(client.user).hasPermission('0x00200000')) return message.reply('Sorry, i dont have the perms to do this cmd i need SPEAK. :x:')
+			if (!message.guild.member(client.user).hasPermission('1048576')) return message.reply('Sorry, i dont have the perms to do this cmd i need CONNECT. :x:')
+			if (!message.guild.member(client.user).hasPermission('2097152')) return message.reply('Sorry, i dont have the perms to do this cmd i need SPEAK. :x:')
 			const channel = message.member.voiceChannel;
 			if (!channel || channel.type !== 'voice') return message.reply('I couldn\'t connect to your voice channel...');
 			if (queue[message.guild.id] === undefined) return message.channel.send(`Add some songs to the queue first with add`);
